@@ -1,0 +1,129 @@
+:root {
+  --bg-color: #343541; /* ChatGPT Dark Grey */
+  --sidebar-bg: #202123;
+  --input-bg: #40414f;
+  --user-msg: #343541;
+  --ai-msg: #444654;
+  --text-color: #ececec;
+  --border-color: #565656;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background-color: var(--sidebar-bg);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #333;
+}
+
+.new-chat-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.new-chat-btn:hover { background: #2f2f2f; }
+
+/* Chat Area */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.messages-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.message-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 24px 20%; /* මැදට ගන්න */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.message-wrapper.ai { background-color: var(--ai-msg); }
+.message-wrapper.user { background-color: var(--user-msg); }
+
+.avatar {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar.gaia { background: #19c37d; }
+.avatar.user { background: #5436da; }
+
+.content {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-top: 3px;
+}
+
+/* Input Area */
+.input-area {
+  padding: 20px 20%;
+  background-image: linear-gradient(180deg, rgba(52,53,65,0), #343541 20%);
+}
+
+.input-box {
+  background: var(--input-bg);
+  border-radius: 12px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.input-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.send-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 5px;
+}
+.send-btn:hover { color: white; }
+.send-btn:disabled { opacity: 0.5; }

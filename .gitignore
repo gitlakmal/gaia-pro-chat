@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies (මේවා GitHub එකට යවන්න එපා, අනිත් අය npm install කරගනී)
+node_modules
+.pnp
+.pnp.js
+
+# Build Output (Build කරපු ෆයිල්)
+dist
+dist-ssr
+*.local
+
+# Environment Variables (රහස් key තියෙන ෆයිල්)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files (VS Code / WebStorm Settings)
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing
+coverage
+
+# Temporary Chat Downloads (අපි Download කරන Chat history txt files GitHub යවන්න ඕන නැත්නම්)
+*.txt
